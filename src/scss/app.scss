@@ -3,20 +3,121 @@
 //font-family: 'Josefin Sans', sans-serif;
 //
 //font-family: 'Playfair Display', serif;
+@import "common";
+@import "top-page";
 
-body {
-   font-family: 'Playfair Display', serif;
-}
 
 .address-block {
-   display: block;
+  display: block;
 }
 
 .contact-form {
-   display: block;
+  display: block;
 
-   span,
-   label {
-      display: block;
-   }
+  span,
+  label {
+    display: block;
+  }
+}
+
+.navbar {
+  //position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #d5322b;
+  padding: 20px;
+  //height: 60px;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+.logo-company-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .menu-item {
+    margin: 0 10px;
+  }
+
+  .menu-link {
+    //color: black;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+}
+
+.section {
+  background-color: #d5322b;
+  padding: 50px 100px 100px 100px;
+  border-bottom: 2px solid white;
+
+  .section-title {
+    color: white;
+    font-size: 90px;
+    font-weight: lighter;
+  }
+
+  .section-subtitle {
+    //color: #4d0101;
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 80px 0 60px 40px;
+  }
+
+
+  p {
+    color: white;
+    font-size: 30px;
+    //font-family: 'Cormorant', serif;
+    width: 50%;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: justify;
+  }
+
+  ul {
+    width: 50%;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 40px;
+    list-style-type: none;
+
+    li {
+      color: white;
+      font-size: 30px;
+      padding: 20px 40px;
+    }
+
+  }
+
 }
