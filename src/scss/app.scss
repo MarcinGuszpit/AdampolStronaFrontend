@@ -1,0 +1,22 @@
+//font-family: 'Cormorant', serif;
+//
+//font-family: 'Josefin Sans', sans-serif;
+//
+//font-family: 'Playfair Display', serif;
+
+body {
+   font-family: 'Playfair Display', serif;
+}
+
+.address-block {
+   display: block;
+}
+
+.contact-form {
+   display: block;
+
+   span,
+   label {
+      display: block;
+   }
+}
