@@ -1,0 +1,19 @@
+@import "mixins";
+
+.section-about {
+   @include section-body;
+   background-color: $red-text;
+
+   .section-title {
+      @include section-title;
+   }
+
+   .section-subtitle {
+      @include section-subtitle;
+   }
+
+   .text {
+       @include par-text(white);
+   }
+
+}

@@ -1,0 +1,14 @@
+@import "mixins";
+
+.offer-section {
+  @include section-body;
+  background-color: white;
+  color: $red-text;
+  border-bottom-color: $red-text;
+
+  .section-title {
+    @include section-title;
+    color: $red-text;
+  }
+
+}

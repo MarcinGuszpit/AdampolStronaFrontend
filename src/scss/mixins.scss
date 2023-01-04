@@ -1,0 +1,32 @@
+$red-text: #d5322b;
+
+@mixin section-title {
+  font-size: 60px;
+  font-weight: lighter;
+  color: white;
+}
+
+@mixin section-body {
+  background-color: $red-text;
+  padding: 0 100px 100px 100px;
+  border-bottom: 2px solid white;
+}
+
+@mixin section-subtitle {
+  //color: #4d0101;
+  color: white;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: lighter;
+  padding: 40px 0 20px;
+}
+
+@mixin par-text($color){
+      color: $color;
+      font-size: 20px;
+      //font-family: 'Cormorant', serif;
+      line-height: 1.5;
+      padding: 20px 80px;
+      max-width: 700px;
+      text-align: justify;
+}

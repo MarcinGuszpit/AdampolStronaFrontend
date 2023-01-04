@@ -14,6 +14,11 @@
     <title>PPHU Adampol Regina Lewandowska</title>
 </head>
 <body class="all">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+</svg>
+
 <div class="app">
     <nav class="navbar">
         <div class="logo-wrapper">
@@ -40,21 +45,27 @@
             </div>
         </div>
     </header>
-    <article class="section">
+    <article class="section section-about">
         <h2 class="section-title">O firmie</h2>
-        <h3 class="section-subtitle">Profil działalności</h3>
-        <p>Adampol jest nowoczesną firmą odzieżową z przeszło 20-letnim doświadczeniem. Domeną naszej działalności jest
-            projektowanie,
-            produkcja oraz dystrybucja odzieży damskiej. Nasze produkty trafiają na rynki
-            zagraniczne oraz rynek Polski poprzez sieć sklepów, oraz hurtowni.</p>
-        <h3 class="section-subtitle">Docelowa grupa klientów</h3>
-        <p>Firma Adampol kieruje swoje produkty do kobiet w średnim wieku ceniących sobie oryginalny styl, praktyczność,
-            oraz bardzo dobrą jakość noszonych ubrań. Nasze kolekcje łącza w sobie klasyczne rozwiązania z oryginalnym
-            wzornictwem.
-            By sprostać oczekiwaniom klientów, nasze modele oferowane są w bardzo szerokiej gamie rozmiarów 38 - 56,
-            niespotykanej zwłaszcza na Polskim rynku.</p>
+        <div class="info-wrapper">
+            <div class="info">
+                <h3 class="section-subtitle">Profil działalności</h3>
+                <p class="text">Adampol jest nowoczesną firmą odzieżową z przeszło 20-letnim doświadczeniem. Domeną naszej działalności jest
+                    projektowanie,
+                    produkcja oraz dystrybucja odzieży damskiej. Nasze produkty trafiają na rynki
+                    zagraniczne oraz rynek Polski poprzez sieć sklepów, oraz hurtowni.</p>
+                <h3 class="section-subtitle">Docelowa grupa klientów</h3>
+                <p class="text">Firma Adampol kieruje swoje produkty do kobiet w średnim wieku ceniących sobie oryginalny styl, praktyczność,
+                    oraz bardzo dobrą jakość noszonych ubrań. Nasze kolekcje łącza w sobie klasyczne rozwiązania z oryginalnym
+                    wzornictwem.
+                    By sprostać oczekiwaniom klientów, nasze modele oferowane są w bardzo szerokiej gamie rozmiarów 38 - 56,
+                    niespotykanej zwłaszcza na Polskim rynku.</p>
+            </div>
+            <img src="images/IMG_7527a.jpg" class="img-decoration" alt="bluzka">
+        </div>
+
     </article>
-    <article class="section">
+    <article class="section offer-section">
         <h2 class="section-title">Oferta</h2>
         <h3 class="section-subtitle">O naszych kolekcjach</h3>
         <p>
@@ -87,7 +98,6 @@
 
     <article class="section">
         <h2 class="section-title">Współpraca</h2>
-
         <h3 class="section-subtitle">Partnerstwo handlowe</h3>
 
         <p>Jeśli jesteś zainteresowany naszą ofertą i chciałbyś nawiązać współpracę w charakterze partnera handlowego
@@ -120,35 +130,37 @@
             wszystkie Twoje pytania.</p>
 
     </article>
-    <article class="section">
+    <article class="section contact-section">
         <h2 class="section-title">Kontakt</h2>
         <div class="contact-details">
             <address class="address-block">
-                <span>PPHU "ADAMPOL Regina Lewandowska"</span>
-                <span>ul. Baworowo 86,</span>
-                <span>59-820-Leśna</span>
-                <span>NIP: 613-100-14-63</span>
-                <span>tel. +48 757 211 740</span>
-                <span>biuro@pphu-adampol.pl</span>
+                <span class="address-info">PPHU "ADAMPOL Regina Lewandowska"</span>
+                <span class="address-info">ul. Baworowo 86</span>
+                <span class="address-info">59-820-Leśna</span>
+                <span class="address-info">NIP: 613-100-14-63</span>
+                <span class="address-info">tel. +48 757 211 740</span>
+                <a class="address-info" href="mailto:biuro@pphu-adampol.pl" >biuro@pphu-adampol.pl</a>
             </address>
-
+            <img src="images/adampol_mapa.png" alt="adampol mapa dojazdu" class="image-map"></img>
+        </div>
+        <div>
             <form action="" class="contact-form">
-                <label>Formularz kontaktowy</label>
-                <label>Temat (*):</label>
-                <input type="text">
-                <label>E-mail (*):</label>
-                <input type="text">
-                <label>Imię i nazwisko</label>
-                <input type="text">
-                <label>Telefon</label>
-                <input type="text">
-                <label>Treść wiadomości (*):</label>
-                <textarea cols="40" rows="10"></textarea>
-                <span>Przesyłając formularz, akceptuję politykę prywatności.</span>
+                <label class="form-title">Formularz kontaktowy</label>
+                <label class="form-label">Temat (*):</label>
+                <input class="form-input" type="text">
+                <label class="form-label">E-mail (*):</label>
+                <input type="text" class="form-input">
+                <label class="form-label">Imię i nazwisko</label>
+                <input type="text" class="form-input">
+                <label class="form-label">Telefon</label>
+                <input type="text" class="form-input">
+                <label class="form-label">Treść wiadomości (*):</label>
+                <textarea cols="40" rows="10" class="form-input"></textarea>
+                <label class="form-label">* - pole wymagane</label>
+                <span class="form-info">Przesyłając formularz, akceptuję politykę prywatności.</span>
+                <input type="submit" class="form-button" value="Wyślij wiadomość">
             </form>
         </div>
-
-
     </article>
     <footer></footer>
 
