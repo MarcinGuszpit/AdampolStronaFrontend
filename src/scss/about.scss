@@ -1,19 +1,47 @@
 @import "mixins";
 
 .section-about {
-   @include section-body;
-   background-color: $red-text;
+  @include section-body($red-text, white);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: stretch;
 
-   .section-title {
-      @include section-title;
-   }
+  .section-title {
+    @include section-title(white);
+  }
 
-   .section-subtitle {
-      @include section-subtitle;
-   }
+  .section-subtitle {
+    @include section-subtitle(white);
+  }
 
-   .text {
-       @include par-text(white);
-   }
+  .text {
+    @include par-text(white);
+  }
+
+  .image-container {
+    display: flex;
+    flex: 6;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-bottom: 2px solid $red-text;
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    padding: 20px 0 100px 100px;
+  }
+
+  .img-decoration {
+    display: block;
+    width: 350px;
+    height: auto;
+    padding: 4px;
+    border: 1px solid $red-text;
+  }
 
 }

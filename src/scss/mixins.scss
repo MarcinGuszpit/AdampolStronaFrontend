@@ -1,20 +1,18 @@
-$red-text: #d5322b;
+$red-text: rgba(213, 50, 43, 1);
 
-@mixin section-title {
+@mixin section-title($color) {
   font-size: 60px;
   font-weight: lighter;
-  color: white;
+  color: $color;
 }
 
-@mixin section-body {
-  background-color: $red-text;
-  padding: 0 100px 100px 100px;
-  border-bottom: 2px solid white;
+@mixin section-body($background-color, $border-color) {
+  background-color: $background-color;
+  border-bottom: 2px solid $border-color;
 }
 
-@mixin section-subtitle {
-  //color: #4d0101;
-  color: white;
+@mixin section-subtitle($color) {
+  color: $color;
   font-size: 40px;
   font-style: italic;
   font-weight: lighter;
@@ -24,7 +22,6 @@ $red-text: #d5322b;
 @mixin par-text($color){
       color: $color;
       font-size: 20px;
-      //font-family: 'Cormorant', serif;
       line-height: 1.5;
       padding: 20px 80px;
       max-width: 700px;
