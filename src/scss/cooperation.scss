@@ -1,0 +1,35 @@
+@import "mixins";
+
+.section-coop {
+   @include section-body(white);
+   display: flex;
+   flex-flow: row-reverse;
+   flex-wrap: wrap;
+   align-content: stretch;
+   align-items: stretch;
+
+   .section-title {
+      @include section-title($red-text);
+   }
+
+   .section-subtitle {
+      @include section-subtitle($red-text);
+   }
+
+   .text {
+      @include par-text($red-text);
+   }
+
+   .image-container {
+      @include image-container($red-text);
+   }
+
+   .info-wrapper {
+     @include info-wrapper;
+   }
+
+   .img-decoration {
+      @include img-decoration(white);
+   }
+
+}

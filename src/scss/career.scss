@@ -1,12 +1,8 @@
 @import "mixins";
 
-.section-about {
+.section-career {
   @include section-body($red-text);
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  align-content: stretch;
-  align-items: stretch;
+  flex-flow: row-reverse;
 
   .section-title {
     @include section-title(white);

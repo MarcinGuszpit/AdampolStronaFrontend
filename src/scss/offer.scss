@@ -1,7 +1,8 @@
 @import "mixins";
 
-.offer-section {
-  @include section-body(white,$red-text);
+.section-offer {
+
+  @include section-body(white);
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -24,29 +25,16 @@
     @include section-title($red-text);
   }
 
-
-
   .image-container {
-    display: flex;
-    flex: 6;
-    align-items: center;
-    justify-content: center;
-    background-color: $red-text;
+    @include image-container($red-text);
   }
 
   .info-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 6;
-    padding: 20px 0 100px 100px;
+    @include info-wrapper;
   }
 
   .img-decoration {
-    display: block;
-    width: 350px;
-    height: auto;
-    padding: 4px;
-    border: 1px solid $red-text;
+    @include img-decoration(white);
   }
 
 
