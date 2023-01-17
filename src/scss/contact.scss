@@ -1,84 +1,122 @@
-.contact-section {
-  display: flex;
-  flex-direction: column;
-
-
-  .contact-form {
-    width: 100%;
-
-    .form-title {
-      font-size: 32px;
-      color: white;
-      padding: 20px 0;
-    }
-
-    .form-label {
-      color: white;
-      font-size: 12px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid white;
-    }
-
-    .form-input {
-      width: 100%;
-      background-color: #d5322b;
-      border: 0;
-      font-size: 30px;
-      border-bottom: 2px solid white;
-      outline: 0;
-      color: white;
-      margin-bottom: 20px;
-
-      &:focus {
-        background-color: #7e1410;
-      }
-    }
-
-    .form-info {
-      color: white;
-      font-size: 24px;
-      padding: 0 10px;
-    }
-
-    .form-button {
-      margin: 20px 0;
-      background-color: white;
-      font-size: 24px;
-      padding: 20px 40px;
-      border-radius: 6px;
-      border: white 1px solid;
-      cursor: pointer;
-    }
-
-
-  }
-
-
-}
+@import "mixins";
 
 .contact-details {
-  display: flex;
-  justify-content: center;
-  column-gap: 5%;
+   @include section-body($red-text);
 
-  .address-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .address-info {
-      padding: 5px 35px;
-      color: white;
-      font-style: normal;
-      font-size: 20px;
-      font-family: 'Josefin Sans', sans-serif;
-    }
+  .section-title {
+    @include section-title(white);
   }
 
-  .image-map {
-    display: block;
-    height: 600px;
-    width: auto;
+  .info-wrapper {
+     @include info-wrapper;
+     justify-content: space-between;
+  }
+
+  .image-container {
+    @include image-container(white);
+  }
+
+  .img-decoration {
+    @include img-decoration($red-text);
+  }
+
+  .details {
+    padding-top: 140px;
+  }
+
+
+  .address-info {
+     display: block;
+     width: 100%;
+     font-size: 24px;
+     color: white;
+     padding: 10px 0 10px 140px;
   }
 
 }
+
+
+//.contact-section {
+//  display: flex;
+//  flex-direction: column;
+//
+//
+//  .contact-form {
+//    width: 100%;
+//
+//    .form-title {
+//      font-size: 32px;
+//      color: white;
+//      padding: 20px 0;
+//    }
+//
+//    .form-label {
+//      color: white;
+//      font-size: 12px;
+//      padding-bottom: 5px;
+//      border-bottom: 1px solid white;
+//    }
+//
+//    .form-input {
+//      width: 100%;
+//      background-color: #d5322b;
+//      border: 0;
+//      font-size: 30px;
+//      border-bottom: 2px solid white;
+//      outline: 0;
+//      color: white;
+//      margin-bottom: 20px;
+//
+//      &:focus {
+//        background-color: #7e1410;
+//      }
+//    }
+//
+//    .form-info {
+//      color: white;
+//      font-size: 24px;
+//      padding: 0 10px;
+//    }
+//
+//    .form-button {
+//      margin: 20px 0;
+//      background-color: white;
+//      font-size: 24px;
+//      padding: 20px 40px;
+//      border-radius: 6px;
+//      border: white 1px solid;
+//      cursor: pointer;
+//    }
+//
+//
+//  }
+//
+//
+//}
+//
+//.contact-details {
+//  display: flex;
+//  justify-content: center;
+//  column-gap: 5%;
+//
+//  .address-block {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//
+//    .address-info {
+//      padding: 5px 35px;
+//      color: white;
+//      font-style: normal;
+//      font-size: 20px;
+//      font-family: 'Josefin Sans', sans-serif;
+//    }
+//  }
+//
+//  .image-map {
+//    display: block;
+//    height: 600px;
+//    width: auto;
+//  }
+//
+//}

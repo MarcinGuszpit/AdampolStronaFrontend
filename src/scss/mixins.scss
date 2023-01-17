@@ -40,6 +40,7 @@ $red-text: rgba(213, 50, 43, 1);
   height: auto;
   padding: 4px;
   border: 1px solid $color;
+  margin: 100px 0;
 }
 
 @mixin image-container($color) {

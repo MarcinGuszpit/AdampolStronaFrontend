@@ -11,24 +11,11 @@
 @import "offer";
 @import "cooperation";
 @import "career";
+@import "form";
 
 svg {
   height: 0;
   display: none;
-}
-
-.address-block {
-
-  display: block;
-}
-
-.contact-form {
-  display: block;
-
-  span,
-  label {
-    display: block;
-  }
 }
 
 .list {
@@ -39,10 +26,10 @@ svg {
       font-size: 20px;
       padding: 20px 0;
       color: white;
-      list-style-type: lower-latin;
+      list-style-type: square;
 
       //&:before {
-      //  content: 'XXXX';
+      //  content: '';
       //  margin-right: 10px;
       //  background-image: url();
       //}

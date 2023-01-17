@@ -1,0 +1,27 @@
+@import "mixins";
+
+.contact-form {
+  @include section-body(white);
+  //flex-direction: row-reverse;
+
+  .info-wrapper {
+     @include info-wrapper;
+     align-items: flex-start;
+  }
+
+  .image-container {
+    @include image-container($red-text);
+  }
+
+  .img-decoration {
+     @include img-decoration(white);
+  }
+
+  .form-label {
+     display: block;
+     font-size: 10px;
+     margin-left: 50px;
+  }
+
+
+}
