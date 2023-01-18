@@ -1,4 +1,6 @@
 $red-text: rgba(213, 50, 43, 1);
+$media-br-1: 820px;
+$media-br-2: 900px;
 
 @mixin section-title($color) {
   font-size: 60px;

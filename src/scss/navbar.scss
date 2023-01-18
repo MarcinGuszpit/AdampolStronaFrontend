@@ -7,6 +7,8 @@
   justify-content: space-between;
   background-color: $red-text;
   padding: 20px;
+  position: relative;
+  align-items: center;
   //height: 60px;
 }
 
@@ -25,29 +27,94 @@
 }
 
 .logo-company-name {
+
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 20px;
   padding-top: 10px;
   text-transform: uppercase;
   color: white;
+
+  @media (min-width: $media-br-2) {
+    font-size: 35px;
+  }
+
+
+}
+
+.navigation {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 .navbar-menu {
+
   display: flex;
+  flex-flow: column;
   list-style-type: none;
-  align-items: center;
-  justify-content: space-evenly;
+  position: absolute;
+  background-color: $red-text;
+  top: 120px;
+  width: 100%;
+  left: 0;
+  @media screen {
+
+    @media (min-width: $media-br-1) {
+      top: auto;
+      left: auto;
+      display: flex;
+      position: relative;
+      flex-flow: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
 
   .menu-item {
-    margin: 0 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 10px;
+
+
+    @media screen {
+
+      @media (min-width: $media-br-1) {
+        margin: 0 10px;
+        border: 0;
+        padding: 0;
+      }
+    }
+
   }
 
   .menu-link {
     color: white;
     display: block;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+
+    @media screen {
+      @media (min-width: $media-br-2) {
+        font-size: 18px;
+      }
+    }
+
+  }
+
+}
+
+.menu-button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  @media screen {
+    @media (min-width: $media-br-1) {
+      display: none;
+    }
   }
 
 }
