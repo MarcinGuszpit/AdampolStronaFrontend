@@ -3,11 +3,19 @@ $media-br-1: 820px;
 $media-br-2: 900px;
 
 @mixin section-title($color) {
-  font-size: 60px;
+  font-size: 30px;
   padding-top: 20px;
-  padding-left: 100px;
+  padding-left: 20px;
   font-weight: lighter;
   color: $color;
+
+  @media (min-width: $media-br-2) {
+    font-size: 60px;
+    padding-top: 20px;
+    padding-left: 100px;
+  }
+
+
 }
 
 @mixin section-body($background-color) {
@@ -17,16 +25,29 @@ $media-br-2: 900px;
   background-color: $background-color;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-content: stretch;
   align-items: stretch;
+
+  @media (min-width: $media-br-2) {
+    flex-direction: row;
+  }
+
+
 }
 
 @mixin section-subtitle($color) {
   color: $color;
-  font-size: 40px;
+  font-size: 20px;
   font-style: italic;
   font-weight: lighter;
-  padding: 40px 0 20px 100px;
+  padding: 20px 0 20px 20px;
+
+  @media (min-width: $media-br-2) {
+    font-size: 40px;
+    padding: 40px 0 20px 100px;
+  }
+
 }
 
 @mixin info-wrapper {
@@ -55,10 +76,17 @@ $media-br-2: 900px;
 
 @mixin par-text($color) {
   color: $color;
-  font-size: 20px;
+  font-size: 14px;
+  padding: 10px 30px;
   line-height: 1.5;
-  padding: 20px 120px;
+
   max-width: 700px;
   text-align: justify;
+
+  @media (min-width: $media-br-2) {
+    font-size: 20px;
+    padding: 20px 120px;
+  }
+
 
 }
