@@ -1,0 +1,15 @@
+@import "mixins";
+
+.changed {
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .logo-company-name {
+    font-size: 20px;
+  }
+
+}

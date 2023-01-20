@@ -5,8 +5,7 @@
   //flex-direction: row-reverse;
 
   .info-wrapper {
-    @include info-wrapper;
-    border-top: 2px solid $red-text;
+    @include info-wrapper(white,$red-text);
     padding-bottom: 20px;
     justify-content: space-between;
   }
@@ -79,29 +78,8 @@
   }
 
   .image-container {
-    @include image-container(white);
+    @include image-container($red-text);
     position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      background-color: $red-text;
-      width: 2px;
-      height: 100%;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      background-color: $red-text;
-      width: 100%;
-      height: 2px;
-    }
-
   }
 
   .img-decoration {

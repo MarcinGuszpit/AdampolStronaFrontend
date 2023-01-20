@@ -2,7 +2,7 @@
 
 .section-career {
   @include section-body($red-text);
-  flex-flow: row-reverse;
+  //flex-flow: row-reverse;
 
   .section-title {
     @include section-title(white);
@@ -21,7 +21,7 @@
   }
 
   .info-wrapper {
-    @include info-wrapper;
+    @include info-wrapper($red-text,white);
   }
 
   .img-decoration {

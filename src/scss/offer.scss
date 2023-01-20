@@ -3,11 +3,6 @@
 .section-offer {
 
   @include section-body(white);
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  align-content: stretch;
-  align-items: stretch;
 
   .section-title {
     @include section-title($red-text);
@@ -30,7 +25,7 @@
   }
 
   .info-wrapper {
-    @include info-wrapper;
+    @include info-wrapper(white,$red-text);
   }
 
   .img-decoration {

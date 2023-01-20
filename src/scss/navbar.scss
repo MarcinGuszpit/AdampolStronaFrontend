@@ -1,15 +1,16 @@
 @import "mixins";
 
 .navbar {
-  //position: fixed;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: $red-text;
   padding: 20px;
-  position: relative;
+  z-index: 10;
+  width: 100%;
   align-items: center;
-  //height: 60px;
+  transition-duration: 0.5s;
 }
 
 .logo-wrapper {
@@ -24,6 +25,7 @@
   height: 80px;
   width: auto;
   display: block;
+  transition-duration: 0.5s;
 }
 
 .logo-company-name {
@@ -34,6 +36,7 @@
   padding-top: 10px;
   text-transform: uppercase;
   color: white;
+  transition-duration: 0.5s;
 
   @media (min-width: $media-br-2) {
     font-size: 35px;
@@ -55,8 +58,11 @@
   flex-flow: column;
   list-style-type: none;
   position: absolute;
-  background-color: $red-text;
+  z-index: 100;
+  //TODO - do zmiany
+  background-color: red;
   top: 120px;
+  //te dwie linijki
   width: 100%;
   left: 0;
   @media screen {

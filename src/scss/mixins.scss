@@ -1,6 +1,6 @@
 $red-text: rgba(213, 50, 43, 1);
 $media-br-1: 820px;
-$media-br-2: 900px;
+$media-br-2: 1100px;
 
 @mixin section-title($color) {
   font-size: 30px;
@@ -24,10 +24,9 @@ $media-br-2: 900px;
   box-sizing: border-box;
   background-color: $background-color;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-content: stretch;
   align-items: stretch;
+  position: relative;
 
   @media (min-width: $media-br-2) {
     flex-direction: row;
@@ -50,18 +49,36 @@ $media-br-2: 900px;
 
 }
 
-@mixin info-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 6;
-    padding-bottom: 100px;
+@mixin info-wrapper($color,$color2) {
+  background-color: $color;
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+  padding-bottom: 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: $color2;
+    width: 100%;
+  }
 }
 
 @mixin img-decoration($color) {
+
   display: block;
-  width: 350px;
+  width: 250px;
   height: auto;
   padding: 4px;
+
+  @media (min-width: $media-br-1) {
+    width: 370px;
+  }
+
+
   border: 1px solid $color;
   margin: 100px 0;
 }
@@ -72,6 +89,7 @@ $media-br-2: 900px;
   align-items: center;
   justify-content: center;
   background-color: $color;
+
 }
 
 @mixin par-text($color) {

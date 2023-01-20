@@ -1,8 +1,7 @@
 //font-family: 'Cormorant', serif;
-//
 //font-family: 'Josefin Sans', sans-serif;
-//
 //font-family: 'Playfair Display', serif;
+
 @import "common";
 @import "navbar";
 @import "top-page";
@@ -13,6 +12,7 @@
 @import "career";
 @import "form";
 @import "footer";
+@import 'script-classes';
 
 svg {
   height: 0;
@@ -34,11 +34,5 @@ svg {
     padding: 20px 0;
     color: white;
     list-style-type: square;
-
-    //&:before {
-    //  content: '';
-    //  margin-right: 10px;
-    //  background-image: url();
-    //}
   }
 }
