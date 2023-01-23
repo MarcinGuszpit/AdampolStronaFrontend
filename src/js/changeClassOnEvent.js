@@ -1,13 +1,7 @@
 export class ChangeClassOnEvent {
 
-    // var pageSmallSize = settings.pageSmallSize || 0;
-    // var pixelsToChangeBig = settings.pixelsChangeBig;
-    // var pixelsToChangeSmall = settings.pixelsChangeSmall;
-    // var classToChange = settings.classToChange;
-
     constructor(settings) {
         if (settings && Object.keys(settings).length > 0) {
-            console.log('has settings');
             this.element = settings.element;
             this.breakValue = settings.breakValue;
             this.className = settings.className;

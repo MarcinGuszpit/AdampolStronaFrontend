@@ -53,16 +53,14 @@
 }
 
 .navbar-menu {
-
-  display: flex;
+  display: none;
+  overflow: hidden;
   flex-flow: column;
   list-style-type: none;
   position: absolute;
   z-index: 100;
-  //TODO - do zmiany
-  background-color: red;
-  top: 120px;
-  //te dwie linijki
+  background-color: $red-text;
+  top: 100%;
   width: 100%;
   left: 0;
   @media screen {
