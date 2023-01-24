@@ -7,11 +7,13 @@
   justify-content: space-between;
   background-color: $red-text;
   padding: 20px;
-  z-index: 10;
+  z-index: 50;
   width: 100%;
+  max-width: 1920px;
   align-items: center;
   transition-duration: 0.5s;
   border-bottom: 1px solid transparent;
+
 }
 
 .logo-wrapper {
@@ -102,6 +104,23 @@
     display: block;
     text-decoration: none;
     font-size: 16px;
+
+    &:after {
+      background-color: white;
+      content: "";
+      display: block;
+      height: 3px;
+      margin-top: 3px;
+      transition-duration: 0.5s;
+      width: 0;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+
 
     @media screen {
       @media (min-width: $media-br-2) {

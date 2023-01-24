@@ -2,10 +2,9 @@
 
 .contact-form {
   @include section-body(white);
-  //flex-direction: row-reverse;
 
   .info-wrapper {
-    @include info-wrapper(white,$red-text);
+    @include info-wrapper(white, $red-text);
     padding-bottom: 20px;
     justify-content: space-between;
   }
@@ -18,11 +17,6 @@
     margin: 20px;
     display: flex;
     flex-direction: column;
-
-    @media (min-width: $media-br-2) {
-      margin: 100px 20px;
-    }
-
   }
 
   .form-label, .form-info {
@@ -32,7 +26,7 @@
     padding: 20px 0 0 10px;
 
     @media (min-width: $media-br-2) {
-      padding: 20px 0 0 100px;
+       padding: 20px 0 0 100px;
     }
 
   }
@@ -44,6 +38,13 @@
   .button-row {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+
+
+    @media (min-width: $media-br-1) {
+      justify-content: flex-start;
+    }
+
   }
 
   .form-button {
@@ -78,8 +79,7 @@
   }
 
   .image-container {
-    @include image-container($red-text);
-    position: relative;
+    @include image-container($red-text, white);
   }
 
   .img-decoration {

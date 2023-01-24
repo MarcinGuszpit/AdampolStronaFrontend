@@ -26,13 +26,25 @@ svg {
 
 
 .list {
-  padding: 40px 140px 60px;
+  padding: 10px 30px;
   list-style-type: none;
 
   li {
-    font-size: 20px;
-    padding: 20px 0;
+    font-size: 14px;
+    padding: 10px;
     color: white;
     list-style-type: square;
   }
+
+  @media screen {
+    @media (min-width: $media-br-1) {
+
+      padding: 40px 140px 60px;
+      li {
+        font-size: 20px;
+        padding: 20px 0;
+      }
+    }
+  }
+
 }

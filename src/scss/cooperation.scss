@@ -16,7 +16,7 @@
    }
 
    .image-container {
-      @include image-container($red-text);
+      @include image-container($red-text, white);
    }
 
    .info-wrapper {

@@ -13,13 +13,19 @@
   }
 
   .image-container {
-    @include image-container(white);
+    @include image-container(white, $red-text);
   }
 
   .img-decoration {
-    border: 50px solid white;
+    border: 20px solid transparent;
     height: 100%;
     width: 100%;
+    min-height: 500px;
+
+    @media (min-width: $media-br-2) {
+      border: 50px solid transparent;
+    }
+
   }
 
   .details {
@@ -30,14 +36,14 @@
   .address-info {
     display: block;
     width: 100%;
-    font-size: 24px;
+    font-size: 14px;
     color: white;
-    padding: 0 20px;
+    padding: 10px 0 0 10px;
 
 
     @media (min-width: $media-br-2) {
       font-size: 20px;
-      padding: 10px 0 10px 140px;
+      padding: 20px 120px;
     }
 
 

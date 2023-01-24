@@ -1,67 +1,217 @@
+@import "mixins";
+
+
 .header-block {
+  overflow: hidden;
   position: relative;
-  height: 100vh;
   width: 100%;
-  background-color: magenta;
+  padding-top: 70px;
+  background-color: $red-text;
 
 
-  //.header-content {
-  //  padding: 25px;
-  //  margin-left: 100px;
-  //  margin-top: 70px;
-  //  display: flex;
-  //  flex-direction: row;
-  //  background-color: rgba(7, 7, 7, 0.4);
-  //  //background-color: #d5322b;
-  //  column-gap: 20px;
-  //}
-  //
-  //.header-logo {
-  //  display: block;
-  //  height: 250px;
-  //  width: auto;
-  //}
-  //
-  //.header-text {
-  //  width: 100%;
-  //  height: 100%;
-  //  display: flex;
-  //  flex-direction: column;
-  //  justify-content: flex-start;
-  //
-  //  .header-company-name {
-  //    color: white;
-  //    font-family: 'Josefin Sans', sans-serif;
-  //    text-transform: uppercase;
-  //    text-shadow: #252323 1px 1px 5px;
-  //    font-size: 55px;
-  //    font-weight: bold;
-  //
-  //  }
-  //
-  //  .full-name {
-  //    display: block;
-  //    color: white;
-  //    font-family: 'Josefin Sans', sans-serif;
-  //    //text-transform: uppercase;
-  //    max-width: 500px;
-  //    line-height: 1.5;
-  //    text-shadow: #252323 1px 1px 5px;
-  //    font-size: 20px;
-  //    font-weight: bold;
-  //    border-bottom: white 4px solid;
-  //  }
-  //
-  //
-  //  .welcome-msg {
-  //    color: white;
-  //    font-family: 'Playfair Display', serif;
-  //    text-shadow: #252323 2px 2px 5px;
-  //    font-size: 25px;
-  //    font-style: italic;
-  //    padding: 40px 0;
-  //  }
-  //
-  //}
+  .header-content {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(7, 7, 7, 0.4);
+    column-gap: 10px;
+
+    @media (min-width: $media-br-1) {
+      top: 25%;
+      column-gap: 20px;
+      flex-direction: row;
+    }
+
+  }
+
+  .header-logo {
+    display: block;
+    height: auto;
+    width: 100px;
+    animation-name: image-anim;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    margin-bottom: 40px;
+
+    @media (min-width: $media-br-1) {
+      height: 200px;
+      width: auto;
+    }
+
+  }
+
+  .header-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .header-company-name {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      font-family: 'Josefin Sans', sans-serif;
+      text-transform: uppercase;
+      text-shadow: #252323 1px 1px 5px;
+      font-size: 25px;
+      font-weight: bold;
+
+      span {
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      &.big {
+        font-size: 45px;
+      }
+
+      @media (min-width: $media-br-1) {
+        font-size: 65px;
+        &.big {
+          font-size: 120px;
+        }
+      }
+
+
+    }
+
+    .full-name {
+      display: block;
+      color: white;
+      font-family: 'Josefin Sans', sans-serif;
+      //text-transform: uppercase;
+      max-width: 500px;
+      line-height: 1.5;
+      text-shadow: #252323 1px 1px 5px;
+      font-size: 14px;
+      font-weight: bold;
+      border-bottom: white 4px solid;
+
+      @media (min-width: $media-br-1) {
+        font-size: 20px;
+      }
+
+
+    }
+
+
+    .welcome-msg {
+
+      display: none;
+
+
+      @media (min-width: $media-br-2) {
+        display: block;
+        color: white;
+        font-family: 'Playfair Display', serif;
+        text-shadow: #252323 2px 2px 5px;
+        font-size: 25px;
+        font-style: italic;
+        padding: 40px 0;
+        animation-name: small-anim;
+        animation-duration: 10s;
+        animation-timing-function: ease;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+      }
+
+
+    }
+
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: none;
+
+    @media (min-width: $media-br-1) {
+      display: block;
+    }
+
+  }
+
+  .hero-img-small {
+    width: 100%;
+    height: auto;
+    display: block;
+
+
+    @media (min-width: $media-br-1) {
+      display: none;
+    }
+
+  }
+
+  @keyframes image-anim {
+    0% {
+      transform: perspective(500px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(500px) rotateY(45deg);
+    }
+  }
+
+  @keyframes title-anim {
+    0% {
+      transform: rotateX(90deg);
+    }
+    7% {
+      transform: rotateX(-30deg);
+    }
+    10% {
+      transform: rotateX(0deg);
+    }
+    90% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(270deg);
+    }
+  }
+
+  @keyframes small-anim {
+    0% {
+      opacity: 0;
+      transform: translateX(-5000px);
+    }
+
+    7% {
+      opacity: 1;
+    }
+
+    10% {
+      transform: translateX(0);
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .span-animation {
+    display: block;
+    animation-name: title-anim;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    transform: perspective(400px) rotateX(80deg);
+    transform-origin: 50% 50%;
+  }
+
 
 }

@@ -36,15 +36,27 @@
     </nav>
 
     <header class="header-block" data-link="home">
-<!--        <div class="header-content">-->
-<!--            <img src="images/adampol_small.png" class="header-logo" alt="company logo">-->
-<!--            <div class="header-text">-->
-<!--                <h1 class="header-company-name">PPHU Adampol</h1>-->
-<!--                <span class="full-name">Przedsiębiorstwo Produkcyjno-Handlowo-Usługowe Regina Lewandowska</span>-->
-<!--                <p class="welcome-msg">Producent odzieży damskiej.</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <img src="images/hero.jpg" alt="hero img">-->
+        <div class="header-content">
+            <img src="images/adampol_small.png" class="header-logo" alt="company logo">
+            <div class="header-text">
+                <h1 class="header-company-name">
+                    PPHU
+                </h1>
+                <h1 class="header-company-name big">
+                    <span class="span-animation" style="animation-delay: 1s;">A</span>
+                    <span class="span-animation" style="animation-delay: 1.5s;">d</span>
+                    <span class="span-animation" style="animation-delay: 2s;">a</span>
+                    <span class="span-animation" style="animation-delay: 2.5s;">m</span>
+                    <span class="span-animation" style="animation-delay: 3s;">p</span>
+                    <span class="span-animation" style="animation-delay: 3.5s;">o</span>
+                    <span class="span-animation" style="animation-delay: 4s;">l</span>
+                </h1>
+                <span class="full-name">Przedsiębiorstwo Produkcyjno-Handlowo-Usługowe Regina Lewandowska</span>
+                <p class="welcome-msg">Producent odzieży damskiej.</p>
+            </div>
+        </div>
+        <img src="images/hero.jpg" alt="hero img" class="hero-img">
+        <img src="images/hero_small.jpg" alt="hero img" class="hero-img-small">
     </header>
 
     <article class="section section-about" data-link="about">
@@ -179,9 +191,7 @@
     <article class="section contact-form">
         <div class="info-wrapper">
             <h3 class="section-tile">Formularz kontaktowy</h3>
-
-            <form action="" class="form">
-
+            <form action="/" class="form" method="post">
                 <label class="form-label">Temat (*):</label>
                 <input class="form-input" type="text">
                 <label class="form-label">E-mail (*):</label>
@@ -191,9 +201,7 @@
                 <label class="form-label">Telefon</label>
                 <input type="text" class="form-input">
                 <label class="form-label">Treść wiadomości (*):</label>
-                <textarea cols="40" rows="5" class="form-input"></textarea>
-                <label class="form-label">* - pole wymagane</label>
-                <span class="form-info">Przesyłając formularz, akceptuję politykę prywatności.</span>
+                <textarea rows="5" class="form-input"></textarea>
                 <div class="button-row">
                     <input type="submit" class="form-button" value="Wyślij wiadomość">
                 </div>
@@ -207,15 +215,10 @@
 
 
     <footer class="footer">
-        <ul class="footer-menu">
-            <li class="footer-item"><a href="#" class="footer-link">Home</a></li>
-            <li class="footer-item"><a href="#" class="footer-link">O firmie</a></li>
-            <li class="footer-item"><a href="#" class="footer-link">Oferta</a></li>
-            <li class="footer-item"><a href="#" class="footer-link">Galeria</a></li>
-            <li class="footer-item"><a href="#" class="footer-link">Współpraca</a></li>
-            <li class="footer-item"><a href="#" class="footer-link">Kariera</a></li>
-            <li class="footer-item"><a href="#" class="footer-link">Kontakt</a></li>
-        </ul>
+        <div class="footer-menu">
+            <p>&copy; 2023 PPHU Adampol</p>
+            <p>Projekt i wykonanie strony - PPHU Adampol</p>
+        </div>
     </footer>
 
 </div>
