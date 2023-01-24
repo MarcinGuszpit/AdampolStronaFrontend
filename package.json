@@ -52,6 +52,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "google-maps-api": "^2.0.1",
     "velocity-animate": "^1.5.2"
   }
 }

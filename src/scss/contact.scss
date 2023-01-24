@@ -1,15 +1,15 @@
 @import "mixins";
 
 .contact-details {
-   @include section-body($red-text);
+  @include section-body($red-text);
 
   .section-title {
     @include section-title(white);
   }
 
   .info-wrapper {
-     @include info-wrapper($red-text,white);
-     justify-content: space-between;
+    @include info-wrapper($red-text, white);
+    justify-content: space-between;
   }
 
   .image-container {
@@ -17,7 +17,9 @@
   }
 
   .img-decoration {
-    @include img-decoration($red-text);
+    border: 50px solid white;
+    height: 100%;
+    width: 100%;
   }
 
   .details {
@@ -26,11 +28,11 @@
 
 
   .address-info {
-     display: block;
-     width: 100%;
-     font-size: 24px;
-     color: white;
-     padding: 0 20px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    padding: 0 20px;
 
 
     @media (min-width: $media-br-2) {
