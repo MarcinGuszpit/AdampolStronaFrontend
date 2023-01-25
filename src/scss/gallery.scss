@@ -1,0 +1,146 @@
+@import "mixins";
+
+.section-gallery {
+  @include section-body($red-text);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+  }
+
+
+
+  .section-title {
+    @include section-title(white);
+  }
+
+  .text {
+    @include par-text(white);
+  }
+
+  .slider {
+    margin: 80px;
+    width: 540px;
+    position: relative;
+  }
+
+  .image-slider {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .thumbnails {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+    width: 500px;
+    flex-wrap: wrap;
+    align-content: center;
+
+
+    .image-thumbnail {
+      width: 60px;
+      height: 90px;
+      padding: 2px;
+      border: 1px dotted transparent;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      &.selected {
+        border: 1px dotted white;
+      }
+
+    }
+
+  }
+
+  .arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    background-color: transparent;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    &:hover {
+      background-color: rgb(231, 183, 183);
+      border: 10px solid rgb(241, 232, 232);
+
+      .arrow {
+        stroke: red;
+      }
+
+    }
+
+    &.left {
+      left: 0;
+      padding-right: 5px;
+    }
+
+    &.right {
+      right: 0;
+      padding-left: 5px;
+    }
+
+  }
+
+  .arrow {
+    stroke: white;
+    stroke-width: 2;
+  }
+
+
+  .image-slide {
+    //position: absolute;
+    display: none;
+    width: 400px;
+    height: auto;
+    padding: 2px;
+    border: 1px dashed white;
+
+    &.show {
+      display: block;
+      margin: 0 auto;
+      animation-name: image-Elem;
+      animation-duration: 5s;
+      //transform: perspective(1500px);
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      backface-visibility: hidden;
+    }
+
+  }
+}
+
+@keyframes image-Elem {
+  0% {
+    opacity: 0;
+    //transform: rotateY(90deg);
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    //transform: rotateY(0);
+  }
+}
+

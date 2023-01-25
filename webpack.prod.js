@@ -50,7 +50,7 @@ module.exports = merge(common, {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'My App',
-            filename: './../../index.html',
+            filename: 'index.html',
             template: path.join(__dirname, srcPath + 'index.html'),
             minify: false
         }),

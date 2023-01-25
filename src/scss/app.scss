@@ -12,12 +12,8 @@
 @import "career";
 @import "form";
 @import "footer";
-@import 'script-classes';
-
-svg {
-  height: 0;
-  display: none;
-}
+@import "script-classes";
+@import "gallery";
 
 .app {
   margin: 0 auto;
