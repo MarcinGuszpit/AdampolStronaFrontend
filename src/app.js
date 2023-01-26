@@ -4,6 +4,7 @@ import './scss/app.scss'
 import {ChangeClassOnEvent} from './js/changeClassOnEvent';
 import {Menu} from './js/menu';
 import {initMap} from './js/maps/maps';
+import {ImageSlider} from "./js/imageSlider";
 
 
 const changeClassOnEvent = new ChangeClassOnEvent({
@@ -23,5 +24,13 @@ const menu = new Menu({
     breakSize: 820
 });
 
-initMap();
+//initMap();
 
+const imageSlider = new ImageSlider({
+    images: document.querySelectorAll('.image-slider .image-wrapper img.image-slide'),
+    thumbnails: document.querySelectorAll('.image-slider .thumbnails img.image-thumbnail'),
+    buttonLeft: document.querySelector('.arrow-wrapper.left'),
+    buttonRight: document.querySelector('.arrow-wrapper.right'),
+    autoPlay: true,
+    delay: 12000
+});
